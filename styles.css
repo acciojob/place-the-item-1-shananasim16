@@ -1,2 +1,48 @@
 
 /* Your CSS Code here. */
+/* Apply styles to the container */
+.holder {
+    display: flex;
+    justify-content: space-between; /* Distribute space between items */
+    flex-wrap: wrap; /* Allow items to wrap to the next row */
+}
+
+/* Apply styles to individual items */
+.item {
+    width: calc(33.33% - 20px); /* Adjust the width based on the desired number of items per row */
+    margin-bottom: 20px; /* Add space between rows */
+    box-sizing: border-box; /* Include padding and border in the width */
+    background-color: #f2f2f2; /* Background color for items */
+    padding: 10px; /* Add padding around items */
+}
+
+/* Media query for responsiveness */
+@media (max-width: 768px) {
+    .item {
+        width: calc(50% - 20px); /* Adjust the width for smaller screens (2 items per row) */
+    }
+}
+
+/* Additional styles for overflow example */
+.overflow-example {
+    max-width: 100%;
+    overflow-x: scroll;
+    white-space: nowrap;
+}
+
+/* Add styles for horizontal scrollbar */
+.overflow-example::-webkit-scrollbar {
+    width: 12px;
+}
+
+.overflow-example::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+.overflow-example::-webkit-scrollbar-thumb {
+    background: #888;
+}
+
+.overflow-example::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
