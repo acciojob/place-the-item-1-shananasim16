@@ -1,16 +1,58 @@
 <!DOCTYPE html>
-
-<html>
-
+<html lang="en">
 <head>
-	<link rel="stylesheet" href="styles.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        .holder {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            gap: 10px; /* Adjust the gap as needed */
+        }
+
+        .item {
+            flex: 1; /* Distribute space evenly among items */
+            min-width: calc(33.33% - 10px); /* Adjust the width based on the number of items you want per row */
+            background-color: #f0f0f0; /* Add your desired background color */
+            padding: 10px; /* Add padding as needed */
+            box-sizing: border-box;
+        }
+
+        /* Example styling for item content */
+        .item p {
+            margin: 0;
+        }
+
+        /* To make sure the first and last items touch the ends of the screen */
+        .item:first-child {
+            margin-left: 0;
+        }
+
+        .item:last-child {
+            margin-right: 0;
+        }
+
+        /* Media query for responsive design */
+        @media (max-width: 768px) {
+            .item {
+                min-width: 100%; /* Single column on smaller screens */
+                margin-left: 0;
+                margin-right: 0;
+            }
+        }
+    </style>
 </head>
-
 <body>
-	<!-- the entire body must be written by student -->
-    <script type="text/javascript" src="./script.js">
-</script>
-
+    <div class="holder">
+        <div class="item">
+            <p>Item 1</p>
+        </div>
+        <div class="item">
+            <p>Item 2</p>
+        </div>
+        <!-- Add more items here -->
+    </div>
 </body>
-
 </html>
+
